@@ -53,7 +53,255 @@ section{padding:110px 5vw}.intro{display:grid;grid-template-columns:.9fr 1.1fr;g
 footer{background:#120b09;color:#9f9287;padding:38px 5vw;display:flex;justify-content:space-between;font-size:10px;letter-spacing:.06em}.gold{color:var(--gold2)}
 
 .reveal{opacity:0;transform:translateY(35px);transition:1s ease}.reveal.show{opacity:1;transform:none}
+/* =========================================
+   MOBILE HAMBURGER MENU
+========================================= */
 
+.hamburger {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.45);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 2px;
+  transition: .3s ease;
+}
+
+.hamburger:hover {
+  background: var(--maroon);
+}
+
+.hamburger span {
+  display: block;
+  width: 19px;
+  height: 1.5px;
+  background: var(--ink);
+  transition: .35s ease;
+}
+
+.hamburger:hover span {
+  background: #fff;
+}
+
+
+/* Mobile menu */
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(88vw, 430px);
+  height: 100vh;
+  background: var(--ivory);
+  z-index: 200;
+  transform: translateX(100%);
+  transition: transform .55s cubic-bezier(.77,0,.18,1);
+  box-shadow: -20px 0 70px rgba(36,21,15,.18);
+  overflow-y: auto;
+}
+
+.mobile-menu.active {
+  transform: translateX(0);
+}
+
+.mobile-menu-inner {
+  min-height: 100%;
+  padding: 30px 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Menu top */
+
+.mobile-menu-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--line);
+}
+
+.mobile-menu-top > span {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .25em;
+  color: var(--gold);
+}
+
+.menu-close {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  background: transparent;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--ink);
+  transition: .3s ease;
+}
+
+.menu-close:hover {
+  background: var(--maroon);
+  color: #fff;
+}
+
+
+/* Menu links */
+
+.mobile-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.mobile-links a {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 21px 0;
+  border-bottom: 1px solid var(--line);
+  font: 600 30px "Cormorant Garamond";
+  color: var(--ink);
+  transition: .3s ease;
+}
+
+.mobile-links a span {
+  width: 25px;
+  font: 700 8px "DM Sans";
+  letter-spacing: .12em;
+  color: var(--gold);
+}
+
+.mobile-links a:hover {
+  color: var(--maroon);
+  padding-left: 8px;
+}
+
+
+/* Footer inside menu */
+
+.mobile-menu-footer {
+  margin-top: auto;
+  padding-top: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.mobile-menu-footer small {
+  display: block;
+  font-size: 7px;
+  letter-spacing: .2em;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+
+.mobile-menu-footer strong {
+  font: 600 34px "Cormorant Garamond";
+}
+
+.mobile-enquire {
+  padding: 13px 17px;
+  background: var(--maroon);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+
+/* Dark overlay */
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20,8,5,.55);
+  backdrop-filter: blur(4px);
+  z-index: 150;
+  opacity: 0;
+  visibility: hidden;
+  transition: .4s ease;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* Prevent scrolling when menu is open */
+
+body.menu-open {
+  overflow: hidden;
+}
+
+
+/* =========================================
+   TABLET / MOBILE
+========================================= */
+
+@media(max-width:900px) {
+
+  .navlinks {
+    display: none;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media(max-width:560px) {
+
+  .hamburger {
+    width: 40px;
+    height: 40px;
+  }
+
+  .mobile-menu {
+    width: 92vw;
+  }
+
+  .mobile-menu-inner {
+    padding: 25px 22px;
+  }
+
+  .mobile-links a {
+    font-size: 27px;
+    padding: 18px 0;
+  }
+
+  .mobile-menu-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mobile-enquire {
+    width: 100%;
+    text-align: center;
+  }
+
+}
 @media(max-width:900px){
  .navlinks{display:none}.hero{grid-template-columns:1fr;padding-top:145px}.hero-stage{height:600px;order:-1}.hero-photo{inset:0 5% 0 7%}.collection-grid{grid-template-columns:1fr 1fr}.fashion-card,.fashion-card.tall{height:580px}.wedding-grid{grid-template-columns:1fr 1fr}.brandrow{grid-template-columns:repeat(3,1fr)}.editorial,.heritage,.visit,.intro{grid-template-columns:1fr}.editorial-image{height:600px}.heritage-number{margin-bottom:40px}
 }
@@ -69,16 +317,82 @@ footer{background:#120b09;color:#9f9287;padding:38px 5vw;display:flex;justify-co
 <div class="topbar">Quality Woven with Trust · Since 1929 · Kolar, Karnataka</div>
 
 <nav class="nav">
- <a href="#" class="logo">B R MUNIYAPPA SONS<small>INDIAN HERITAGE · CONTEMPORARY STYLE</small></a>
- <div class="navlinks">
-  <a href="#collections">Collections</a>
-  <a href="#wedding">Wedding</a>
-  <a href="#heritage">Heritage</a>
-  <a href="#brands">Brands</a>
-  <a href="#visit">Visit</a>
- </div>
- <a class="nav-cta" href="#visit">Enquire</a>
+  <a href="#" class="logo">
+    B R MUNIYAPPA SONS
+    <small>INDIAN HERITAGE · CONTEMPORARY STYLE</small>
+  </a>
+
+  <div class="navlinks">
+    <a href="#collections">Collections</a>
+    <a href="#wedding">Wedding</a>
+    <a href="#heritage">Heritage</a>
+    <a href="#brands">Brands</a>
+    <a href="#visit">Visit</a>
+  </div>
+
+  <a class="nav-cta" href="#visit">Enquire</a>
+
+  <!-- Mobile Hamburger -->
+  <button class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-inner">
+
+    <div class="mobile-menu-top">
+      <span>MENU</span>
+      <button class="menu-close" id="menuClose" aria-label="Close menu">
+        ×
+      </button>
+    </div>
+
+    <div class="mobile-links">
+      <a href="#collections">
+        <span>01</span>
+        Collections
+      </a>
+
+      <a href="#wedding">
+        <span>02</span>
+        Wedding
+      </a>
+
+      <a href="#heritage">
+        <span>03</span>
+        Heritage
+      </a>
+
+      <a href="#brands">
+        <span>04</span>
+        Brands
+      </a>
+
+      <a href="#visit">
+        <span>05</span>
+        Visit Us
+      </a>
+    </div>
+
+    <div class="mobile-menu-footer">
+      <div>
+        <small>ESTABLISHED</small>
+        <strong>1929</strong>
+      </div>
+
+      <a href="#visit" class="mobile-enquire">
+        Enquire Now →
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<div class="menu-overlay" id="menuOverlay"></div>
 
 <header class="hero">
  <div class="hero-copy reveal">
@@ -187,6 +501,50 @@ document.querySelector('.hero-stage').addEventListener('mousemove',e=>{
  hero.style.transform=`rotateY(${-7+x*5}deg) rotateX(${y*-3}deg)`;
 });
 document.querySelector('.hero-stage').addEventListener('mouseleave',()=>hero.style.transform='rotateY(-7deg)');
+ /* =========================================
+   MOBILE MENU
+========================================= */
+
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+const menuClose = document.getElementById('menuClose');
+const menuOverlay = document.getElementById('menuOverlay');
+const mobileLinks = document.querySelectorAll('.mobile-links a');
+const mobileEnquire = document.querySelector('.mobile-enquire');
+
+function openMenu() {
+  mobileMenu.classList.add('active');
+  menuOverlay.classList.add('active');
+  document.body.classList.add('menu-open');
+}
+
+function closeMenu() {
+  mobileMenu.classList.remove('active');
+  menuOverlay.classList.remove('active');
+  document.body.classList.remove('menu-open');
+}
+
+hamburger.addEventListener('click', openMenu);
+
+menuClose.addEventListener('click', closeMenu);
+
+menuOverlay.addEventListener('click', closeMenu);
+
+mobileLinks.forEach(link => {
+  link.addEventListener('click', closeMenu);
+});
+
+if (mobileEnquire) {
+  mobileEnquire.addEventListener('click', closeMenu);
+}
+
+/* Close with ESC */
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    closeMenu();
+  }
+});
 </script>
 </body>
 </html>
