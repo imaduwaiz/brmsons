@@ -1,1 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B R Muniyappa Sons | Indian Heritage & Contemporary Fashion</title>
+<meta name="description" content="B R Muniyappa Sons — Since 1929. Discover premium Indian wear, wedding collections, silk sarees, sherwanis, kurtas and contemporary fashion in Kolar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+ --ink:#17120e;--espresso:#24150f;--cream:#f8f3eb;--ivory:#fffdf9;
+ --maroon:#641d26;--maroon2:#3f1118;--gold:#b48a48;--gold2:#d9bd82;
+ --muted:#776d62;--line:rgba(36,21,15,.13);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",sans-serif}
+a{text-decoration:none;color:inherit}button{font:inherit}.grain{position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+.topbar{height:34px;background:var(--maroon2);color:#fff;padding:0 5vw;display:flex;align-items:center;justify-content:center;font-size:10px;letter-spacing:.23em;text-transform:uppercase}
+.nav{height:82px;position:fixed;top:34px;left:0;right:0;z-index:50;background:rgba(248,243,235,.86);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;transition:.3s}
+.logo{font-family:"Cormorant Garamond";font-size:25px;font-weight:700;line-height:.75;letter-spacing:.02em}.logo small{display:block;font:600 8px "DM Sans";letter-spacing:.25em;margin-top:10px;color:var(--gold)}
+.navlinks{display:flex;gap:27px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}.navlinks a{opacity:.7}.navlinks a:hover{opacity:1;color:var(--maroon)}
+.nav-cta{border:1px solid var(--ink);padding:12px 18px;border-radius:2px;font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+
+.hero{min-height:100vh;padding:150px 5vw 65px;display:grid;grid-template-columns:.82fr 1.18fr;gap:4vw;align-items:center;overflow:hidden;background:linear-gradient(115deg,#f8f3eb 0%,#f8f3eb 48%,#eadac7 48%,#f0e2d0 100%)}
+.hero-copy{max-width:620px;position:relative;z-index:3}.kicker{font-size:10px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+h1{font:600 clamp(58px,7.2vw,110px)/.83 "Cormorant Garamond";letter-spacing:-.04em;margin:0}.hero-copy h1 em{font-style:italic;color:var(--maroon)}
+.hero-copy p{color:var(--muted);line-height:1.8;font-size:14px;max-width:500px;margin:28px 0}.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{padding:14px 21px;border:1px solid var(--ink);font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;transition:.3s}.btn.primary{background:var(--maroon);border-color:var(--maroon);color:#fff}.btn:hover{transform:translateY(-3px);box-shadow:0 15px 35px #24150f22}
+
+.hero-stage{height:720px;position:relative;perspective:1400px}.hero-photo{position:absolute;inset:3% 6% 0 12%;overflow:hidden;border-radius:2px 2px 110px 2px;box-shadow:35px 45px 90px #3f11182b;transform:rotateY(-7deg);transition:transform 1s}.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.95)}
+.hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,#1b0c09aa)}.hero-label{position:absolute;bottom:35px;left:35px;z-index:2;color:#fff}.hero-label small{display:block;font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold2);margin-bottom:6px}.hero-label strong{font:600 38px "Cormorant Garamond"}
+.gold-disc{position:absolute;width:155px;height:155px;border-radius:50%;right:-15px;top:35px;background:radial-gradient(circle at 35% 30%,#f3dfad,#b68b48 48%,#68461f);box-shadow:0 25px 60px #6c482455;display:grid;place-items:center;color:#fff;text-align:center;font:600 22px "Cormorant Garamond";transform:translateZ(80px)}.gold-disc span{font-size:8px;letter-spacing:.18em;font-family:"DM Sans";display:block;margin-top:3px}
+.floating-card{position:absolute;left:-10px;bottom:60px;background:#fffdf9;padding:20px 24px;box-shadow:0 20px 50px #24150f22;z-index:5;width:200px}.floating-card span{font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}.floating-card b{display:block;font:600 27px "Cormorant Garamond";margin-top:5px}
+
+.marquee{background:var(--maroon);color:#fff;overflow:hidden;white-space:nowrap;border-block:1px solid #ffffff18}.track{display:inline-block;padding:16px 0;font-size:9px;letter-spacing:.28em;text-transform:uppercase;animation:move 28s linear infinite}.track i{font-style:normal;color:var(--gold2);margin:0 25px}@keyframes move{to{transform:translateX(-50%)}}
+
+section{padding:110px 5vw}.intro{display:grid;grid-template-columns:.9fr 1.1fr;gap:9vw;align-items:end}.eyebrow{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:17px}.display{font:600 clamp(45px,5vw,72px)/.92 "Cormorant Garamond";margin:0}.intro p{max-width:550px;color:var(--muted);line-height:1.9;font-size:14px}
+
+.collection-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:15px;margin-top:50px}.fashion-card{height:620px;position:relative;overflow:hidden;background:#ddd}.fashion-card.tall{height:700px}.fashion-card img{width:100%;height:100%;object-fit:cover;transition:1s}.fashion-card:hover img{transform:scale(1.06)}.fashion-card:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 45%,#130907bb)}.fashion-copy{position:absolute;bottom:28px;left:28px;right:20px;color:#fff;z-index:2}.fashion-copy span{font-size:8px;letter-spacing:.23em;text-transform:uppercase;color:var(--gold2)}.fashion-copy h3{font:600 40px "Cormorant Garamond";margin:7px 0}.fashion-copy p{font-size:10px;opacity:.78;letter-spacing:.1em;text-transform:uppercase}
+
+.editorial{background:var(--espresso);color:#fff;display:grid;grid-template-columns:1.1fr .9fr;gap:7vw;align-items:center}.editorial-image{height:700px;position:relative;overflow:hidden}.editorial-image img{width:100%;height:100%;object-fit:cover}.editorial-image:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#24150f22,#24150f00)}.editorial-copy .display{color:#fff}.editorial-copy p{color:#c6b8ab;line-height:1.9;font-size:14px}.quote{margin:40px 0;padding-left:25px;border-left:1px solid var(--gold);font:italic 24px "Cormorant Garamond";color:#e8d8c5}.statrow{display:flex;gap:35px;margin-top:35px}.stat strong{display:block;font:600 35px "Cormorant Garamond";color:var(--gold2)}.stat small{font-size:8px;text-transform:uppercase;letter-spacing:.16em;color:#aaa}
+
+.wedding{background:var(--ivory)}.wedding-head{text-align:center;max-width:720px;margin:auto}.wedding-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:55px}.mini{height:470px;position:relative;overflow:hidden}.mini img{width:100%;height:100%;object-fit:cover;transition:.8s}.mini:hover img{transform:scale(1.05)}.mini .tag{position:absolute;left:18px;bottom:18px;background:#fffdf9;color:var(--ink);padding:11px 14px;font-size:9px;letter-spacing:.12em;text-transform:uppercase}
+
+.brands{background:#f1e7d8}.brandrow{display:grid;grid-template-columns:repeat(5,1fr);margin-top:50px;border-top:1px solid var(--line);border-left:1px solid var(--line)}.brand{height:125px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;place-items:center;text-align:center;padding:15px;font:600 21px "Cormorant Garamond";color:#49392f}.brand:hover{background:#fff8ee;color:var(--maroon)}
+
+.heritage{display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:center}.heritage-number{font:700 clamp(120px,17vw,230px)/.65 "Cormorant Garamond";color:#d3b27a;letter-spacing:-.08em}.heritage-copy .display{margin-bottom:20px}.heritage-copy p{color:var(--muted);line-height:1.9;font-size:14px}.chips{display:flex;gap:7px;flex-wrap:wrap;margin-top:25px}.chip{padding:9px 13px;border:1px solid var(--line);font-size:8px;text-transform:uppercase;letter-spacing:.15em}
+
+.visit{background:var(--maroon2);color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:7vw;align-items:center}.visit .display{color:#fff}.visit p{color:#c9bbb0;line-height:1.8}.contact{border:1px solid #ffffff22;padding:32px}.contact-row{padding:18px 0;border-bottom:1px solid #ffffff1a}.contact-row:last-child{border:0}.contact-row small{display:block;color:var(--gold2);font-size:8px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:7px}.contact-row a{font-size:13px}
+
+footer{background:#120b09;color:#9f9287;padding:38px 5vw;display:flex;justify-content:space-between;font-size:10px;letter-spacing:.06em}.gold{color:var(--gold2)}
+
+.reveal{opacity:0;transform:translateY(35px);transition:1s ease}.reveal.show{opacity:1;transform:none}
+
+@media(max-width:900px){
+ .navlinks{display:none}.hero{grid-template-columns:1fr;padding-top:145px}.hero-stage{height:600px;order:-1}.hero-photo{inset:0 5% 0 7%}.collection-grid{grid-template-columns:1fr 1fr}.fashion-card,.fashion-card.tall{height:580px}.wedding-grid{grid-template-columns:1fr 1fr}.brandrow{grid-template-columns:repeat(3,1fr)}.editorial,.heritage,.visit,.intro{grid-template-columns:1fr}.editorial-image{height:600px}.heritage-number{margin-bottom:40px}
+}
+@media(max-width:560px){
+ .topbar{font-size:8px;letter-spacing:.13em}.logo{font-size:20px}.nav{padding:0 5vw}.nav-cta{display:none}.hero{padding-inline:5vw}.hero-stage{height:480px}.gold-disc{width:105px;height:105px;font-size:17px}.floating-card{width:165px;padding:15px;bottom:20px}.floating-card b{font-size:22px}.collection-grid,.wedding-grid{grid-template-columns:1fr}.fashion-card,.fashion-card.tall{height:520px}.editorial-image{height:500px}.brandrow{grid-template-columns:1fr 1fr}.brand{height:100px}.statrow{gap:18px}.stat strong{font-size:28px}footer{display:block;line-height:2.1}
+}
+</style>
+</head>
+
+<body>
+<div class="grain"></div>
+
+<div class="topbar">Quality Woven with Trust · Since 1929 · Kolar, Karnataka</div>
+
+<nav class="nav">
+ <a href="#" class="logo">B R MUNIYAPPA SONS<small>INDIAN HERITAGE · CONTEMPORARY STYLE</small></a>
+ <div class="navlinks">
+  <a href="#collections">Collections</a>
+  <a href="#wedding">Wedding</a>
+  <a href="#heritage">Heritage</a>
+  <a href="#brands">Brands</a>
+  <a href="#visit">Visit</a>
+ </div>
+ <a class="nav-cta" href="#visit">Enquire</a>
+</nav>
+
+<header class="hero">
+ <div class="hero-copy reveal">
+  <div class="kicker">The House of Indian Elegance</div>
+  <h1>Tradition,<br><em>Tailored</em><br>Beautifully.</h1>
+  <p>Discover a refined world of Indian fashion — from elegant sarees and festive ethnic wear to sherwanis, kurtas and contemporary occasion dressing.</p>
+  <div class="actions">
+   <a class="btn primary" href="#collections">Explore Indian Wear</a>
+   <a class="btn" href="#heritage">Our 1929 Story</a>
+  </div>
+ </div>
+
+ <div class="hero-stage">
+  <div class="hero-photo">
+   <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1500&q=90" alt="Indian traditional fashion model">
+   <div class="hero-label"><small>New Season · Indian Edit</small><strong>Heritage, Reimagined.</strong></div>
+  </div>
+  <div class="gold-disc">1929<span>ESTABLISHED</span></div>
+  <div class="floating-card"><span>Our destination</span><b>24,000 sq. ft.</b></div>
+ </div>
+</header>
+
+<div class="marquee"><div class="track">SAREES <i>✦</i> SHERWANIS <i>✦</i> KURTAS <i>✦</i> SILK <i>✦</i> WEDDING EDIT <i>✦</i> ETHNIC WEAR <i>✦</i> FINE FABRICS <i>✦</i> FOUR GENERATIONS <i>✦</i> SAREES <i>✦</i> SHERWANIS <i>✦</i> KURTAS <i>✦</i> SILK <i>✦</i> WEDDING EDIT <i>✦</i></div></div>
+
+<section id="collections">
+ <div class="intro reveal">
+  <div><div class="eyebrow">The Indian Edit</div><h2 class="display">Dressed in<br>culture & character.</h2></div>
+  <p>Our collections celebrate the richness of Indian dressing while keeping the silhouette modern, polished and effortless. Explore statement pieces for festivals, weddings, celebrations and everyday elegance.</p>
+ </div>
+
+ <div class="collection-grid">
+  <article class="fashion-card tall reveal">
+   <img src="https://images.unsplash.com/photo-1583391733981-849840e6e9b0?auto=format&fit=crop&w=1000&q=90" alt="Indian woman in traditional wear">
+   <div class="fashion-copy"><span>01 · Women</span><h3>The Saree Edit</h3><p>Silk · Festive · Contemporary</p></div>
+  </article>
+  <article class="fashion-card reveal">
+   <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=1000&q=90" alt="Indian man in traditional clothing">
+   <div class="fashion-copy"><span>02 · Men</span><h3>The Kurta Edit</h3><p>Classic · Festive · Refined</p></div>
+  </article>
+  <article class="fashion-card tall reveal">
+   <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=1000&q=90" alt="Indian festive fashion">
+   <div class="fashion-copy"><span>03 · Occasion</span><h3>Wedding Edit</h3><p>Sherwani · Silk · Celebration</p></div>
+  </article>
+ </div>
+</section>
+
+<section class="editorial">
+ <div class="editorial-image reveal">
+  <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=1400&q=90" alt="Elegant Indian fashion">
+ </div>
+ <div class="editorial-copy reveal">
+  <div class="eyebrow">A Legacy of Selection</div>
+  <h2 class="display">Not just clothing.<br>A way of celebrating.</h2>
+  <p>For generations, families in Kolar have trusted B R Muniyappa Sons for occasions that matter. Our approach combines carefully selected fabrics, trusted brands and personal service.</p>
+  <div class="quote">“Where heritage meets the way India dresses today.”</div>
+  <div class="statrow">
+   <div class="stat"><strong>1929</strong><small>Founded</small></div>
+   <div class="stat"><strong>4</strong><small>Generations</small></div>
+   <div class="stat"><strong>24K</strong><small>Sq. Ft.</small></div>
+  </div>
+ </div>
+</section>
+
+<section id="wedding" class="wedding">
+ <div class="wedding-head reveal"><div class="eyebrow">The Celebration Collection</div><h2 class="display">For the moments<br>you'll remember.</h2><p style="color:var(--muted);line-height:1.8">From the first family function to the big wedding day, discover Indian silhouettes designed to make every celebration memorable.</p></div>
+ <div class="wedding-grid">
+  <div class="mini reveal"><img src="https://images.unsplash.com/photo-1727430228383-aa1fb59db8bf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2lsayUyMHNhcmVlfGVufDB8fDB8fHww" alt="Indian ethnic fashion"><div class="tag">Sarees</div></div>
+  <div class="mini reveal"><img src="https://images.unsplash.com/photo-1597983073493-88cd35cf93b0?auto=format&fit=crop&w=800&q=90" alt="Indian menswear"><div class="tag">Mens Ethnic</div></div>
+  <div class="mini reveal"><img src="https://images.unsplash.com/photo-1605763240000-7e93b172d754?auto=format&fit=crop&w=800&q=90" alt="Indian fashion"><div class="tag">Festive</div></div>
+  <div class="mini reveal"><img src="https://images.unsplash.com/photo-1610030469668-8e9f7d2f9f2b?auto=format&fit=crop&w=800&q=90" alt="Indian traditional clothing"><div class="tag">Silk & Weaves</div></div>
+ </div>
+</section>
+
+<section id="brands" class="brands">
+ <div class="intro reveal"><div><div class="eyebrow">Trusted Names</div><h2 class="display">Brands we<br>carry.</h2></div><p>Alongside our Indian wear selection, discover established fashion labels chosen for quality, fit and everyday versatility.</p></div>
+ <div class="brandrow reveal">
+  <div class="brand">Louis Philippe</div><div class="brand">Allen Solly</div><div class="brand">Van Heusen</div><div class="brand">Peter England</div><div class="brand">Oxemberg</div>
+  <div class="brand">STORI</div><div class="brand">Red Flame</div><div class="brand">Reid & Taylor</div><div class="brand">Arvind</div><div class="brand">Linen Club</div>
+ </div>
+</section>
+
+<section id="heritage" class="heritage">
+ <div class="reveal"><div class="eyebrow">Since 1929</div><div class="heritage-number">97</div><div style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)">Years of trust</div></div>
+ <div class="heritage-copy reveal"><h2 class="display">Four generations.<br>One promise.</h2><p>Founded in 1929, our family business has grown into a 24,000 sq. ft. fashion destination in Kolar, Karnataka. Through every generation, our promise has remained simple: quality products, trusted brands and a warm personal shopping experience.</p><div class="chips"><span class="chip">Silk Mark Certified</span><span class="chip">Family Owned</span><span class="chip">Kolar</span><span class="chip">Since 1929</span></div></div>
+</section>
+
+<section id="visit" class="visit">
+ <div class="reveal"><div class="eyebrow">Come experience the collection</div><h2 class="display">Your next<br>occasion starts here.</h2><p>Visit our 24,000 sq. ft. store in Kolar and experience Indian wear, menswear, fabrics and premium brands under one roof.</p><div class="actions"><a class="btn" style="color:#fff;border-color:#ffffff66" href="https://maps.google.com/?q=B+R+Muniyappa+Sons+Kolar" target="_blank">Get Directions ↗</a></div></div>
+ <div class="contact reveal">
+  <div class="contact-row"><small>Location</small>Kolar, Karnataka, India</div>
+  <div class="contact-row"><small>Collections</small>Indian Wear · Wedding · Menswear · Fabrics</div>
+  <div class="contact-row"><small>WhatsApp</small><a href="https://wa.me/919999999999" target="_blank">Chat with our team →</a></div>
+ </div>
+</section>
+
+<footer><div>© 2026 B R Muniyappa Sons. All Rights Reserved.</div><div class="gold">QUALITY WOVEN WITH TRUST · EST. 1929</div></footer>
+
+<script>
+const nav=document.querySelector('.nav');
+window.addEventListener('scroll',()=>{nav.style.boxShadow=scrollY>30?'0 10px 35px rgba(36,21,15,.08)':'none';});
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
+const hero=document.querySelector('.hero-photo');
+document.querySelector('.hero-stage').addEventListener('mousemove',e=>{
+ const r=e.currentTarget.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+ hero.style.transform=`rotateY(${-7+x*5}deg) rotateX(${y*-3}deg)`;
+});
+document.querySelector('.hero-stage').addEventListener('mouseleave',()=>hero.style.transform='rotateY(-7deg)');
+</script>
+</body>
+</html>
 
